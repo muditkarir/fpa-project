@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { fetchEDGARSubmissions, formatFilings, getCompanyName } from '../utils/edgarClient';
 
 const FilingsList = () => {
-  const [cik, setCik] = useState('320193'); // Default to Adobe's CIK
+  const [cik, setCik] = useState('796343'); // Default to Adobe's CIK
   const [filings, setFilings] = useState([]);
   const [companyName, setCompanyName] = useState('');
   const [loading, setLoading] = useState(false);

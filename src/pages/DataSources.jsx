@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MacroDataSection from "../components/MacroDataSection";
 import FilingsList from "../components/FilingsList";
 import FinnhubSection from "../components/FinnhubSection";
+import FXSection from "../components/FXSection";
 
 const DataSources = () => (
   <div className="page-container">
@@ -91,6 +92,8 @@ const DataSources = () => (
         <div className="source-access">
           <p><em>Access: Public Federal Reserve data feeds - direct API access available without authentication</em></p>
         </div>
+        
+        <FXSection />
       </div>
 
       <div className="data-source-section">
