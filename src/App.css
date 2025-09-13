@@ -2985,15 +2985,16 @@ body {
 .cta-section {
   text-align: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: white !important;
 }
 
 .cta-section h2 {
-  color: white;
+  color: white !important;
   border-bottom-color: rgba(255, 255, 255, 0.3);
 }
 
 .cta-section p {
+  color: white !important;
   font-size: 18px;
   line-height: 1.6;
   opacity: 0.95;
