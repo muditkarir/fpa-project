@@ -7,6 +7,7 @@ import ScenarioAnalysis from "./pages/ScenarioAnalysis";
 import Insights from "./pages/Insights";
 import DataSources from "./pages/DataSources";
 import About from "./pages/About";
+import HowItWorks from "./pages/HowItWorks";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/insights" element={<Insights />} />
           <Route path="/sources" element={<DataSources />} />
           <Route path="/about" element={<About />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
         </Routes>
       </Layout>
     </Router>

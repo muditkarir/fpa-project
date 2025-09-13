@@ -60,7 +60,11 @@ const Home = () => {
         const response = await fetch('/api/fred?series_id=CPIAUCSL&limit=1');
         
         if (response.ok) {
-          const data = await response.json();
+          const result = await response.json();
+          
+          // Handle the API wrapper structure
+          const data = result.data || result;
+          
           if (data.observations && data.observations.length > 0) {
             setCpiData({
               loading: false,
@@ -74,7 +78,7 @@ const Home = () => {
             setCpiData({ loading: false, data: null, error: 'No data available' });
           }
         } else {
-          setCpiData({ loading: false, data: null, error: 'Failed to fetch' });
+          setCpiData({ loading: false, data: null, error: 'Service unavailable' });
         }
       } catch (error) {
         setCpiData({ loading: false, data: null, error: 'Connection error' });
@@ -227,10 +231,15 @@ const Home = () => {
           <div className="snapshot-tile">
             <div className="snapshot-label">Consumer Price Index</div>
             <div className="snapshot-value">
-              {cpiData.loading ? '...' : cpiData.error ? '—' : cpiData.data?.value || '—'}
+              {cpiData.loading ? '...' : cpiData.data?.value || '—'}
             </div>
             <div className="snapshot-date">
-              {cpiData.loading ? 'Loading...' : cpiData.error ? cpiData.error : formatDate(cpiData.data?.date)}
+              {cpiData.loading ? 'Loading...' : cpiData.data?.date ? formatDate(cpiData.data.date) : 'No data'}
+              {cpiData.error && cpiData.data && (
+                <span style={{ fontSize: '11px', color: '#666', display: 'block' }}>
+                  ({cpiData.error})
+                </span>
+              )}
             </div>
           </div>
           
@@ -299,7 +308,7 @@ const Home = () => {
           from regulatory filings—all in one integrated workflow designed for modern FP&A teams.
         </p>
         <p>
-          <Link to="/about" className="insights-link">Learn more about the methodology and technical approach →</Link>
+          <Link to="/how-it-works" className="insights-link">Learn more about the methodology and technical approach →</Link>
         </p>
       </div>
     </div>
