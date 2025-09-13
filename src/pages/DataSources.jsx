@@ -4,6 +4,7 @@ import MacroDataSection from "../components/MacroDataSection";
 import FilingsList from "../components/FilingsList";
 import FinnhubSection from "../components/FinnhubSection";
 import FXSection from "../components/FXSection";
+import FinancialTrendsPanel from "../components/FinancialTrendsPanel";
 
 const DataSources = () => (
   <div className="page-container">
@@ -65,6 +66,8 @@ const DataSources = () => (
         </div>
         
         <FilingsList />
+        
+        <FinancialTrendsPanel cik="0000796343" />
         
         <div className="insights-hint">
           <p>💡 <strong>Pro tip:</strong> Paste MD&A sections into <Link to="/insights" className="insights-link">Insights</Link> to generate outlook bullets and tone analysis.</p>
