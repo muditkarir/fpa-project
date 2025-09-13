@@ -10,6 +10,33 @@ const DataSources = () => (
     <h1>Data Sources</h1>
     <p>Financial, macroeconomic, and FX context for scenario analysis.</p>
     
+    <div className="data-sources-info">
+      <div className="data-source-section">
+        <h3>📈 FRED (Federal Reserve) - Macroeconomic Data</h3>
+        <div className="source-description">
+          <p>Federal Reserve Economic Data from the St. Louis Fed provides authoritative U.S. and international economic indicators.</p>
+        </div>
+        <div className="source-details">
+          <h4>What We Use:</h4>
+          <ul>
+            <li><strong>Consumer Price Index (CPI-U):</strong> All Urban Consumers index measuring inflation trends that impact subscription pricing power</li>
+            <li><strong>Unemployment Rate:</strong> Labor market conditions affecting enterprise software demand and customer budget constraints</li>
+            <li><strong>GDP Growth:</strong> Overall economic health indicators influencing B2B software spending and expansion rates</li>
+            <li><strong>Interest Rates:</strong> Federal funds rate and treasury yields affecting discount rates and capital allocation decisions</li>
+          </ul>
+          <h4>How It Supports Scenarios:</h4>
+          <ul>
+            <li>Inflation data informs price increase assumptions</li>
+            <li>Employment trends guide customer acquisition forecasts</li>
+            <li>Economic growth correlates with enterprise expansion scenarios</li>
+          </ul>
+        </div>
+        <div className="source-access">
+          <p><em>Access: Secure API proxy with cached responses - FRED API key managed server-side</em></p>
+        </div>
+      </div>
+    </div>
+    
     <MacroDataSection />
     
     <div className="data-sources-info">
@@ -45,32 +72,7 @@ const DataSources = () => (
       </div>
 
       <div className="data-source-section">
-        <h3>📈 FRED (Federal Reserve) - Macroeconomic Data</h3>
-        <div className="source-description">
-          <p>Federal Reserve Economic Data from the St. Louis Fed provides authoritative U.S. and international economic indicators.</p>
-        </div>
-        <div className="source-details">
-          <h4>What We Use:</h4>
-          <ul>
-            <li><strong>Consumer Price Index (CPI-U):</strong> All Urban Consumers index measuring inflation trends that impact subscription pricing power</li>
-            <li><strong>Unemployment Rate:</strong> Labor market conditions affecting enterprise software demand and customer budget constraints</li>
-            <li><strong>GDP Growth:</strong> Overall economic health indicators influencing B2B software spending and expansion rates</li>
-            <li><strong>Interest Rates:</strong> Federal funds rate and treasury yields affecting discount rates and capital allocation decisions</li>
-          </ul>
-          <h4>How It Supports Scenarios:</h4>
-          <ul>
-            <li>Inflation data informs price increase assumptions</li>
-            <li>Employment trends guide customer acquisition forecasts</li>
-            <li>Economic growth correlates with enterprise expansion scenarios</li>
-          </ul>
-        </div>
-        <div className="source-access">
-          <p><em>Access: Secure API proxy with cached responses - FRED API key managed server-side</em></p>
-        </div>
-      </div>
-
-      <div className="data-source-section">
-        <h3>💱 FX (Federal Reserve H.10) - Foreign Exchange</h3>
+        <h3> FX (Federal Reserve H.10) - Foreign Exchange</h3>
         <div className="source-description">
           <p>Federal Reserve's H.10 release provides official foreign exchange rates for major trading partners.</p>
         </div>
@@ -121,24 +123,6 @@ const DataSources = () => (
         </div>
         
         <FinnhubSection symbol="ADBE" />
-      </div>
-
-      <div className="api-management-section">
-        <h3>🔐 Data Access & API Management</h3>
-        <div className="api-details">
-          <div className="api-method">
-            <h4>Development Environment:</h4>
-            <p>Local proxy server handles FRED API calls using environment variables. Other sources accessed directly via public endpoints.</p>
-          </div>
-          <div className="api-method">
-            <h4>Production Environment:</h4>
-            <p>Vercel serverless functions provide secure API key management with response caching. All sensitive keys remain server-side only.</p>
-          </div>
-          <div className="api-method">
-            <h4>Data Freshness:</h4>
-            <p>FRED data cached for 1 hour, SEC filings updated quarterly, FX rates available daily. All sources provide reliable, auditable data provenance.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>

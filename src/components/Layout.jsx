@@ -26,6 +26,14 @@ const Layout = ({ children }) => {
             <NavLink to="/about" className="nav-link">
               About
             </NavLink>
+            <a 
+              href="https://www.linkedin.com/in/mudit-karir" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="nav-link external-link"
+            >
+              Mudit LinkedIn
+            </a>
           </nav>
         </div>
       </header>
