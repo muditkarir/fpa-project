@@ -30,15 +30,16 @@ const HowItWorks = () => {
           <div className="data-source-section">
             <h3>📈 Macroeconomic Context</h3>
             <p>
-              Live CPI and inflation data are pulled from the FRED API, providing up-to-date economic indicators 
-              that inform pricing and cost assumptions.
+              Live CPI and inflation data are pulled from the <strong>FRED API</strong> (Federal Reserve Economic Data), 
+              providing up-to-date economic indicators that inform pricing and cost assumptions.
             </p>
           </div>
 
           <div className="data-source-section">
             <h3>📋 EDGAR (SEC) Financial Statements</h3>
             <p>
-              The app fetches and displays recent SEC filings for Adobe, including 10-K, 10-Q, and 8-K reports.
+              The app fetches and displays recent SEC filings for Adobe using <strong>EDGAR</strong> 
+              (Electronic Data Gathering, Analysis, and Retrieval system), including 10-K, 10-Q, and 8-K reports.
             </p>
           </div>
 
@@ -120,11 +121,11 @@ const HowItWorks = () => {
             <p>The numbers you adjust aren't just guesses—they're informed by real data:</p>
             <ul className="connection-list">
               <li>
-                <strong>Macroeconomic data</strong> (like inflation from FRED) helps you decide if 
+                <strong>Macroeconomic data</strong> (like inflation from FRED - Federal Reserve Economic Data) helps you decide if 
                 price increases are realistic.
               </li>
               <li>
-                <strong>SEC filings</strong> (like revenue and expenses from EDGAR) show historical trends, 
+                <strong>SEC filings</strong> (like revenue and expenses from EDGAR - Electronic Data Gathering, Analysis, and Retrieval system) show historical trends, 
                 so you can set reasonable growth rates or cost assumptions.
               </li>
               <li>
@@ -155,7 +156,7 @@ const HowItWorks = () => {
             <ul className="nlp-features">
               <li>
                 <strong>Auto-Fetch:</strong> The tool can automatically pull the latest "Outlook" or MD&A 
-                section from Adobe's most recent 10-Q filing using the SEC EDGAR API.
+                section from Adobe's most recent 10-Q filing using the SEC EDGAR API (Electronic Data Gathering, Analysis, and Retrieval system).
               </li>
               <li>
                 <strong>Summarization:</strong> Using a Hugging Face summarization model (BART), the tool 
