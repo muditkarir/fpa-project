@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MacroDataSection from "../components/MacroDataSection";
 import FilingsList from "../components/FilingsList";
 import FinnhubSection from "../components/FinnhubSection";
@@ -36,6 +37,10 @@ const DataSources = () => (
         </div>
         
         <FilingsList />
+        
+        <div className="insights-hint">
+          <p>💡 <strong>Pro tip:</strong> Paste MD&A sections into <Link to="/insights" className="insights-link">Insights</Link> to generate outlook bullets and tone analysis.</p>
+        </div>
       </div>
 
       <div className="data-source-section">

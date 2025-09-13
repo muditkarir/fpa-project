@@ -1446,3 +1446,507 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Insights Page Styles */
+.insights-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  color: #23272f;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.page-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.input-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.input-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #23272f;
+}
+
+.text-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #ff6b00;
+}
+
+.text-input::placeholder {
+  color: #999;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.action-btn.primary {
+  background: #ff6b00;
+  color: white;
+}
+
+.action-btn.primary:hover:not(:disabled) {
+  background: #e55a00;
+}
+
+.action-btn.secondary {
+  background: #f1f3f4;
+  color: #23272f;
+  border: 2px solid #e1e5e9;
+}
+
+.action-btn.secondary:hover:not(:disabled) {
+  background: #e8eaed;
+  border-color: #ccc;
+}
+
+.results-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.results-section h3 {
+  color: #23272f;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.summary-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-bullet {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f3f4;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.summary-bullet:last-child {
+  border-bottom: none;
+}
+
+.summary-bullet::before {
+  content: '•';
+  color: #ff6b00;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.tone-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sentence-analysis {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #e1e5e9;
+}
+
+.sentence-text {
+  margin: 0 0 0.75rem 0;
+  font-style: italic;
+  color: #444;
+  line-height: 1.5;
+}
+
+.tone-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tone-chip {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tone-chip.positive {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.tone-chip.negative {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.tone-chip.neutral {
+  background: #f5f5f5;
+  color: #616161;
+}
+
+.confidence {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.qa-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.qa-section h3 {
+  color: #23272f;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.qa-input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.question-input:focus {
+  outline: none;
+  border-color: #ff6b00;
+}
+
+.qa-result {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ff6b00;
+  margin-top: 1rem;
+}
+
+.answer {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.qa-confidence {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.error-state {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.retry-btn {
+  background: #ffc107;
+  color: #856404;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.retry-btn:hover {
+  background: #ffb300;
+}
+
+.tech-note {
+  background: #f1f3f4;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #666;
+}
+
+.tech-note p {
+  margin: 0.5rem 0;
+}
+
+.models-info {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Mobile Responsiveness for Insights */
+@media (max-width: 768px) {
+  .insights-page {
+    padding: 1rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .input-section,
+  .results-section,
+  .qa-section {
+    padding: 1.5rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .qa-input-group {
+    flex-direction: column;
+  }
+  
+  .tone-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .insights-page {
+    padding: 0.5rem;
+  }
+  
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .input-section,
+  .results-section,
+  .qa-section,
+  .tech-note {
+    padding: 1rem;
+  }
+  
+  .text-input {
+    padding: 0.75rem;
+  }
+  
+  .action-btn {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* AI Assist Callouts */
+.ai-assist-callout {
+  background: linear-gradient(135deg, #fff5f0 0%, #fff8f5 100%);
+  border: 2px solid #ff6b00;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.ai-callout-content {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ai-callout-text {
+  flex: 1;
+}
+
+.ai-callout-text strong {
+  color: #ff6b00;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ai-callout-text p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.ai-callout-btn {
+  background: #ff6b00;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ai-callout-btn:hover {
+  background: #e55a00;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+}
+
+.insights-hint {
+  background: #f8f9fa;
+  border-left: 4px solid #ff6b00;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.insights-hint p {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.insights-link {
+  color: #ff6b00;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.insights-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive adjustments for callouts */
+@media (max-width: 768px) {
+  .ai-callout-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .ai-callout-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .insights-hint {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-assist-callout {
+    margin: 1rem 0;
+  }
+  
+  .ai-callout-content {
+    padding: 1rem;
+  }
+  
+  .ai-callout-text strong {
+    font-size: 1rem;
+  }
+  
+  .insights-hint {
+    padding: 0.75rem;
+  }
+}
+
+/* EDGAR Source Display */
+.edgar-source {
+  background: #f0f4f8;
+  border: 1px solid #d1e7dd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.edgar-source p {
+  margin: 0;
+  color: #155724;
+}
+
+.source-link {
+  color: #ff6b00;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive for EDGAR source */
+@media (max-width: 768px) {
+  .edgar-source {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .edgar-source p {
+    line-height: 1.6;
+  }
+}
